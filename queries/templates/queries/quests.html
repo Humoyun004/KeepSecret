@@ -1,0 +1,25 @@
+{% extends 'queries/base.html' %}
+
+{% block heading %}
+    <title>Home Page!</title>
+{% endblock %}
+
+{% block content %}
+    {% for question in questions %}
+        <div class="main_card">
+            <div class="profile-user d-flex align-items-center">
+                <img class="avatar-user rounded-circle " src="{{ question.user.profile.profile_image.url  }}" alt="Profile Image">
+                <div class="user-details ml-5">
+                <p class="p-username mb-0 font-weight-bold ">{{ question.user.username }}</p>
+                <p class="p-question-date mb-0 text-muted">{{ question.timestamp|date:"H:i, d.m.Y" }}</p>
+            </div>
+        </div>
+
+        <div class="card-question mt-2">
+            <div class="card-question">
+                <p class="card-text">{{ question.text }}<a class="card-hashtag-a" href="#"> #{{ question.hashtag }}</a></p>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

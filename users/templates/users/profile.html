@@ -1,0 +1,26 @@
+{% extends 'queries/base.html' %}
+
+{% block heading %}
+    <title>Profile Info Page!</title>
+{% endblock %}
+
+{% block content %}
+    <div class="content-section">
+        {% csrf_token %}
+        <div class="mb-3 mx-auto card_obj">
+            <div class="p-3">
+                <div class="profile-user d-flex  justify-content-center">
+                    <img class="avatar-user rounded-circle " src="{{ user.profile.profile_image.url  }}" alt="Profile Image">
+                </div>
+                <p class="username-p"><span class="info_p"><i class="fa-solid fa-user left_p"></i>Username:</span> {{ user.username }}</p>
+                <p class="username-p"><span class="info_p"><i class="fa-solid fa-envelope left_p"></i>Email:</span> {{ user.email }}</p>
+                {% if user.profile %}
+                    <p class="username-p"><span class="info_p"><i class="fa-solid fa-signature left_p"></i>Full Name:</span> {{ user.profile.fullname }}</p>
+                    <p class="username-p"><span class="info_p"><i class="fa-solid fa-square-phone-flip left_p"></i>Phone Number:</span> {{ user.profile.phone_number }}</p>
+                    <p class="username-p"><span class="info_p"><i class="fa-solid fa-genderless left_p"></i>Gender:</span> {{ user.profile.gender }}</p>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

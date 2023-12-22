@@ -1,0 +1,67 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block heading %}{% endblock %}
+    <script src="https://kit.fontawesome.com/6bcd034bb1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amita&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'queries/style.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <p class="navbar-brand font-weight-bold" ><span class="highlight1">Keep</span><span class="highlight">Secret</span>  <i class="fa-solid fa-paper-plane logo_avatar"></i></p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar navbar-collapse right_side" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto mb-2 mb-lg-0 main_ul">
+                  {% if user.is_authenticated %}
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/"><i class="fa-solid fa-home"></i> Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Questions' %}"><i class="fa-solid fa-layer-group"></i>  Queries</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'QuestionAdd' %}"><i class="fa-solid fa-plus"></i> New</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'ProfileUpdate' %}"><i class="fa-solid fa-circle-user"></i> Edit</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'ProfileInfo' %}" aria-disabled="true"><i class="fa-solid fa-user"></i> Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Logout' %}" aria-disabled="true"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                      </li>
+                  {% else %}
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'Login' %}"><i class="fa-sharp fa-solid fa-arrow-right"></i> Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signup' %}"><i class="fa-solid fa-arrow-right-to-bracket"></i> SignUp</a>
+                      </li>
+                  {% endif %}
+              </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-white right">
+        <form class="d-flex" role="search" action="{% url 'Search' %}" method="POST">
+            {% csrf_token %}
+            <input class="form-control me-2" type="search" name="searched" placeholder="Search question" aria-label="Search" >
+{#            <button class="btn btn-outline-secondary rounded-circle but" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>#}
+          </form>
+    </nav>
+    {% block content %}{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

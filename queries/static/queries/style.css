@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DFDFDF;
+
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.navbar-brand {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 40px;
+    padding-left: 180px;
+    padding-right: 90px;
+
+}
+
+.highlight1 {
+    color: #FC3340;
+}
+
+.right_side {
+  margin-left: 10px;
+    margin-right: 180px;
+}
+
+.nav-item {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Amita', serif;
+    /*color: #3E3F57;*/
+    font-size: 18px;
+}
+
+.nav-link a {
+    color: #6E777F;
+}
+
+.nav-link i {
+    margin-right: 2px;
+    color: dodgerblue;
+}
+
+.form-control::placeholder {
+    color: #BEBEBE;
+    font-size: 15px;
+
+}
+
+.form-control {
+    width: 900px;
+    margin:  auto;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.form-control:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.but {
+    width: 40px;
+    margin-left: 20px;
+}
+
+.right {
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+.main_ul {
+    margin-left: auto;
+}
+
+.highlight {
+    color: #3E3F57;
+}
+
+.logo_avatar {
+    color: dodgerblue;
+}
+
+.avatar-user {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.main_card {
+    width: 950px;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: 0.3s;
+}
+
+.main_card:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 6px 12px, rgba(0, 0, 0, 0.23) 0px 6px 12px;
+}
+
+hr {
+    color: #4444;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.card-hashtag-a {
+    text-decoration: none;
+}
+
+.form-label.requiredField  {
+    display: flex;
+    justify-content: center;
+    font-family: 'Amita', serif;
+    color: #3E3F57;
+}
+
+.form-label {
+    color: #3E3F57;
+    display: flex;
+    justify-content: center;
+    font-family: 'Amita', serif;
+}
+
+.form-check-label {
+    font-family: 'Amita', serif;
+    color: #3E3F57;
+    display: flex;
+    justify-content: center;
+}
+
+.asteriskField {
+    display: none;
+}
+
+
+.textinput.form-control, .emailinput.form-control, .passwordinput.form-control {
+    width: 470px;
+}
+
+.textarea.form-control {
+    width: 470px;
+    height: 85px;
+}
+
+.form-text li {
+    display: none;
+}
+
+.form-text {
+    display: none;
+}
+
+.card_obj {
+    margin-top: 30px;
+    width: 500px;
+    height: 320px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.card_obj:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card_obj1 {
+    margin-top: 30px;
+    width: 500px;
+    height: 790px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+
+.card_obj1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);;
+}
+
+.info_profile  {
+    display: flex;
+    justify-content: center;
+}
+
+.comment_back {
+    background-color: #F3F9FE;
+}
+
+.username-p {
+    display: flex;
+    justify-content: center;
+}
+
+.info_p {
+    font-family: 'Amita', serif;
+    color: #FC3340;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.left_p {
+    margin-right: 5px;
+    color: dodgerblue;
+}
+
+.form_regist {
+    text-decoration: none;
+}
+
+.card_cent {
+    margin: auto    ;
+}
+
+.extra.card-comment {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
