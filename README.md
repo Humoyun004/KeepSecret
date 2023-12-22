@@ -10,7 +10,6 @@
 ![img4](Media/project_images/img4.png)
 ![img5](Media/project_images/img5.png)
 ![img6](Media/project_images/img6.png)
-![img7](Media/project_images/img7.png)
 **Пример программы так работает.**
 
 ## ✨ Особенности
@@ -34,18 +33,18 @@
 ### Для `Postgres`
 
 1. В файле настроек вашего проекта (`settings.py`), убедитесь, что используется `Postgres`:
-    ```python
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.  postgresql_psycopg2',
-            'NAME': 'название_вашей_базы_данных',
-            'USER': 'ваше_имя_пользователя',
-            'PASSWORD': 'ваш_пароль',
-            'HOST': 'localhost',
-            'PORT': 5432,
-        }
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.  postgresql_psycopg2',
+        'NAME': 'название_вашей_базы_данных',
+        'USER': 'ваше_имя_пользователя',
+        'PASSWORD': 'ваш_пароль',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
-    ```
+}
+```
 
 ### Создание базы данных
 
@@ -57,14 +56,16 @@
 
 
 ### Если же можете `SQLite` default базу данные использовать:
-    ```
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-    ```
+}
+```
+
+    
 
 # Использование `pipenv` в проекте
 
@@ -93,7 +94,7 @@
     ```
 2. Заходите в репозиторий:
     ```
-    $ cd Currency_App
+    $ cd KeepSecret
     ```
 
 3. Запустите команду `pipenv install`, чтобы создать виртуальное окружение и установить все зависимости из файла `Pipfile.lock`.
